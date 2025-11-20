@@ -75,12 +75,56 @@ Exercice 10 : MathUtil
 
 ##**Bloc 5 : Packages et mini-projet**
 
-Exercice 11 : library
-- Packages : model, service, app.
-- Classes Book, Member, LibraryService, Main.
-- Ajouter livres/membres et les afficher.
+  # Mini-Projet Java : Library Management
 
-Exercice 12 : Amélioration library
-- Book et Member immuables.
-- Copies/non-modifiable lists dans getters.
-- Méthode findBooksByAuthor().
+## Contexte
+
+Ce bloc modélise une mini-bibliothèque avec gestion de livres et membres.  
+Objectifs principaux : classes, encapsulation, immuabilité, packages et collections.
+
+## Arborescence
+
+```
+TD-ENCAPSULATION/
+       └─ library
+          ├───Ex11
+          │   ├───app
+          |   |    └─ MainApp.java
+          │   ├───model
+          |   |   ├─ Book.java
+          |   |   └─ Member.java
+          │   └───service
+          |   │   └─ LibraryService.java
+          └───Ex12
+              ├───app
+              |    └─ MainApp.java
+              ├───model
+              |   ├─ Book.java
+              |   └─ Member.java
+              └───service
+                  └─ LibraryService.java
+```
+
+## Packages et Classes
+
+### model
+- `Book` : isbn, title, author (immuable, validation constructeur)
+- `Member` : id, name, email (immuable, validation constructeur)
+
+### service
+- `LibraryService` : listes de livres et membres, méthodes pour ajouter, accéder et rechercher par auteur.
+
+### app
+- `MainApp` : test des fonctionnalités, ajout et affichage des livres/membres.
+
+## Compilation
+
+```bash
+javac library/model/*.java library/service/*.java library/app/*.java
+```
+
+## Exécution
+
+```bash
+java library.app.MainApp
+```
